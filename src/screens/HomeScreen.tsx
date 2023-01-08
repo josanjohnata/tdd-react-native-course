@@ -4,6 +4,8 @@ import {styles} from './styles';
 import {Colors} from '../constants';
 import {Text, View} from 'react-native';
 import moment from 'moment';
+import {WeatherCurrent} from '../components/WeatherCurrent';
+import {WeatherCoordinates} from '../components/WeatherCoordinates';
 
 export default function HomeScreen() {
   const now = moment(new Date());
@@ -16,6 +18,11 @@ export default function HomeScreen() {
         <Text style={styles.date}>{now.format('MMM DD, YYYY')}</Text>
         <Text style={styles.day}>{now.format('dddd')}</Text>
       </View>
+      <WeatherCurrent />
+      <Text testID="home-screen-divider" style={styles.divider}>
+        Or
+      </Text>
+      <WeatherCoordinates />
     </LinearGradient>
   );
 }

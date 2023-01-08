@@ -19,4 +19,8 @@ export const styles = StyleSheet.create({
     color: Colors.WHITE,
     fontSize: 21,
   },
+  divider: {
+    color: Colors.WHITE,
+    textAlign: 'center',
+  },
 });
