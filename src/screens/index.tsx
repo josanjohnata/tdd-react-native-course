@@ -1,9 +1,8 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-
+import {NavigationContainer} from '@react-navigation/native';
 import HomeScreen from './HomeScreen';
-import {WeatherScreen} from './WeatherScreen';
+import WeatherScreen from './WeatherScreen';
 
 export type RootStackParamList = {
   Home: undefined;
@@ -12,7 +11,7 @@ export type RootStackParamList = {
 
 const RootStack = createStackNavigator<RootStackParamList>();
 
-export function AppNavigator() {
+function AppNavigator() {
   return (
     <NavigationContainer>
       <RootStack.Navigator screenOptions={{headerShown: false}}>
@@ -22,3 +21,5 @@ export function AppNavigator() {
     </NavigationContainer>
   );
 }
+
+export default AppNavigator;

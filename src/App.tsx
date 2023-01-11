@@ -1,6 +1,14 @@
 import React from 'react';
-import {AppNavigator} from './screens';
+import {Provider} from 'react-redux';
+import AppNavigator from './screens';
+import store from './store';
 
-export default function App() {
-  return <AppNavigator />;
+function App() {
+  return (
+    <Provider store={store}>
+      <AppNavigator />
+    </Provider>
+  );
 }
+
+export default App;
